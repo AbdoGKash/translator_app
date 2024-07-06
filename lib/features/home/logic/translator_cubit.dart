@@ -5,18 +5,18 @@ import 'package:translator/translator.dart';
 part 'translator_state.dart';
 
 class TranslatorCubit extends Cubit<TranslatorState> {
-  final outputController = TextEditingController(text: "result hrer ... ");
+  final outputController = TextEditingController();
 
   final translator = GoogleTranslator();
 
   String inputText = '';
-  String inputLanguage = 'ar';
-  String outputLanguage = 'en';
+  String inputLanguageCode = 'ar';
+  String outputLanguageCode = 'en';
   TranslatorCubit() : super(TranslatorInitial());
 
   Future<void> translatorText() async {
     final translated = await translator.translate(inputText,
-        from: inputLanguage, to: outputLanguage);
+        from: inputLanguageCode, to: outputLanguageCode);
     outputController.text = translated.text;
   }
 }

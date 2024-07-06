@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'color_manger.dart';
 
 class TextStyelManger {
-  static TextStyle font24BlackBold = TextStyle(
+  static TextStyle font24PrimaryBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.bold,
-    color: ColorsManger.black,
+    color: ColorsManger.primary,
   );
   static TextStyle font24WhiteBold = TextStyle(
     fontSize: 24.sp,
