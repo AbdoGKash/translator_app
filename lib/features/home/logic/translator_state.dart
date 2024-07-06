@@ -4,3 +4,5 @@ part of 'translator_cubit.dart';
 sealed class TranslatorState {}
 
 final class TranslatorInitial extends TranslatorState {}
+
+class Translated extends TranslatorState {}
